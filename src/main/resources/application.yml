@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  mvc:
+    view:
+      prefix: /pages/
+      suffix: .jsp
+
+  datasource:
+    url: jdbc:mysql:///security_authority?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  type-aliases-package: cn.lx.security.doamin
+  configuration:
+    #驼峰
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    cn.lx.security: debug
